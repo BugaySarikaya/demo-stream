@@ -1,0 +1,31 @@
+<div class="topnav menu-bar">
+  <a href="#" class="title">{{vm.subTitle}}</a>
+</div>
+
+<div class="content" id="home">
+  <div ng-if="vm.loading" class="loader">Loading...</div>
+  <div ng-if="vm.error">{{vm.error}}</div>
+
+  <div class="row" ng-if="!vm.loading">
+
+    <div class="column">
+      <div class="frame" ui-sref="serie">
+        <div class="card" id="card"
+          ng-style="{'background-image': 'url({{vm.placeHolderLink}})'}">
+          <p style="color: white; font-size: 24px; text-align:center; padding-top: 100px;">SERIES</p>
+        </div>
+        <p>Popular Series</p>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="frame" ui-sref="movie">
+        <div class="card" id="card"
+          ng-style="{'background-image': 'url({{vm.placeHolderLink}})'}">
+          <p style="color: white; font-size: 24px; text-align:center; padding-top: 100px;">MOVIES</p>
+        </div>
+        <p>Popular Movies</p>
+      </div>
+    </div>
+  </div>
+</div>

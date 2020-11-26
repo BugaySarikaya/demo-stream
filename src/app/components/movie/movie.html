@@ -1,0 +1,19 @@
+<div class="topnav menu-bar">
+  <a href="#" class="title">{{vm.subTitle}}</a>
+</div>
+
+<div class="content" id="movie">
+  <div ng-if="vm.loading" class="loader">Loading...</div>
+  <div ng-if="vm.error">{{vm.error}}</div>
+
+  <div class="row" ng-if="vm.movieList">
+    <div class="column" ng-repeat="movie in vm.movieList">
+      <div class="frame">
+        <div class="card" id="card" style="background-repeat: no-repeat;background-size: contain;"
+          ng-style="{'background-image': 'url({{movie.images['Poster Art'].url}})'}">
+        </div>
+        <p>{{movie.title}}</p>
+      </div>
+    </div>
+  </div>
+</div>

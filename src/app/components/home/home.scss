@@ -1,0 +1,24 @@
+#home {
+  p{
+    text-align: left;
+  }
+  
+  .card {
+    width: 150px;
+    height: 250px;
+    background-size: 274px 160px;
+    background-position: -62px 35px;
+    background-color: black; 
+    background-repeat: no-repeat;
+    cursor:pointer;
+  }
+
+  .column {
+    margin-left: 16px;
+    width: 150px;
+  }
+}
+
+#home.content {
+  overflow-y: unset;
+}
